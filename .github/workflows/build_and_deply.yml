@@ -30,3 +30,12 @@ jobs:
       with:
         name: test-reports
         path: build/reports/tests/test/
+        
+    - name: Publish package
+      run: ./gradle publish 
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
+        
+        
+        
